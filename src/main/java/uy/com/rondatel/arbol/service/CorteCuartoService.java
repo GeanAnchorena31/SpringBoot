@@ -29,7 +29,7 @@ public class CorteCuartoService {
     public int guardar(CorteRes corteRes) {
 
         try {
-            List<CorteRes> listaCorteCuarto = corteCuartoRepository.buscarPorCorteCuarto(corteRes.getArticulo(), corteRes.getRes());
+            List<CorteRes> listaCorteCuarto = corteCuartoRepository.buscarPorCorteCuarto(corteRes.getArticulo(), (int) corteRes.getRes());
             if (listaCorteCuarto == null) {
                 corteCuartoRepository.save(corteRes);
                 return 1;
